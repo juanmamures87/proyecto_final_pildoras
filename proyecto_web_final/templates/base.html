@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      {% block title %}
+        <!-- Aquí iría el el título específico de cada página -->
+      {% endblock %}
+    </title>
+    <!-- Estilos comunes de todas las páginas -->
+    <link rel="stylesheet" href="{% static 'proyecto_inicio_app/style.css' %}" />
+    {% block styles %}
+    <!-- Aquí puedes poner los estilos CSS que son específicos de cada página -->
+    {% endblock %}
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">
+        <img src="{% static 'proyecto_inicio_app/images/logo_rpg.jpeg' alt='Logo tienda Master Games' %}" >
+      </a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/servicios/">Servicios</a>
+            <a href="/tienda/">Tienda</a>
+            <a href="/blog/">Blog</a>
+            <a href="/contacto/">Contacto</a>
+        </nav>
+    </header>
+
+    <main class='contenido-principal'>
+      {% block content %}
+        <!-- Aquí iría el contenido específico de cada página -->
+      {% endblock %}
+    </main>
+
+    <footer class='footer'>
+      <p>C/ La perla negra nº54, 58942, Sotahuesos, Mundo Muerto</p>
+      <p>Tel. 666 66 66 66</p>
+      <p>Email: mastergames@torcuato.com</p>
+    </footer>
+
+    <!-- Script común para todas las páginas -->
+    <script src="{% static 'proyecto_inicio_app/script.js' %}"></script>
+    {% block scripts %}
+      <!-- Aquí puedes poner la referencia a archivos .js que son específicos a cada página -->
+    {% endblock %}
+  </body>
+</html>
