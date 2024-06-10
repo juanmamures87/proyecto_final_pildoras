@@ -38,3 +38,18 @@ body {
   font-family: "Courier New", Courier, monospace;
   border-top: 2px dashed gray;
 }
+
+/* A partir de aquí son los estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header img {
+    margin-bottom: 10px;
+  }
+
+  .header nav a {
+    margin: 5px 0;
+  }
+}
