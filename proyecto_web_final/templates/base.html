@@ -11,25 +11,60 @@
         <!-- Aquí iría el el título específico de cada página -->
       {% endblock %}
     </title>
+	
     <!-- Estilos comunes de todas las páginas -->
-    <link rel="stylesheet" href="{% static 'proyecto_inicio_app/style.css' %}" />
+	
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'proyecto_inicio_app/vendor/bootstrap/css/bootstrap.min.css' %}">
+
+    <!-- Fonts -->
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
+     
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'proyecto_inicio_app/css/gestion.css' %}">
+	
     {% block styles %}
     <!-- Aquí puedes poner los estilos CSS que son específicos de cada página -->
     {% endblock %}
+	
   </head>
   <body>
-    <header class="header">
-      <a href="/">
-        <img src="{% static 'proyecto_inicio_app/images/logo_rpg.jpeg' alt='Logo tienda Master Games' %}" >
-      </a>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/servicios/">Servicios</a>
-            <a href="/tienda/">Tienda</a>
-            <a href="/blog/">Blog</a>
-            <a href="/contacto/">Contacto</a>
-        </nav>
-    </header>
+  
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+		<span class="site-heading-lower">Gestión de Pedidos</span>
+    </h1>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="/">Gestión de Pedidos</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item active px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="/">Inicio</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="/servicios/">Servicios</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="/tienda/">Tienda</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="/contacto/">Contacto</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="/blog/">Blog</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	 </nav>
 
     <main class='contenido-principal'>
       {% block content %}
@@ -38,13 +73,42 @@
     </main>
 
     <footer class='footer'>
-      <p>C/ La perla negra nº54, 58942, Sotahuesos, Mundo Muerto</p>
-      <p>Tel. 666 66 66 66</p>
-      <p>Email: mastergames@torcuato.com</p>
+		<footer class="footer text-faded text-center py-5">
+		<div class="container">
+			<p class="m-0">
+				<a href="#" class="link">
+					<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+				<a href="#" class="link">
+					<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+				<a href="#" class="link">
+					<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			</p>
+			<p class="m-0 mbt">
+				<a href="sample.html" class="link">Política de privacidad</a> ·
+				<a href="sample.html" class="link">Aviso legal</a> ·
+				<a href="sample.html" class="link">Cookies</a>
+			</p>
+			<p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
+      </div>
+	</footer>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'proyecto_inicio_app/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'proyecto_inicio_app/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     </footer>
 
-    <!-- Script común para todas las páginas -->
-    <script src="{% static 'proyecto_inicio_app/script.js' %}"></script>
     {% block scripts %}
       <!-- Aquí puedes poner la referencia a archivos .js que son específicos a cada página -->
     {% endblock %}
