@@ -1,3 +1,7 @@
+/**
+ * Código para conseguir que los nombres indicadores de página del navbar aparezcan seleccionados
+ */
+
 // Obtiene todos los elementos 'nav-item'
 let navItems = document.querySelectorAll(".nav-item");
 
@@ -16,3 +20,5 @@ navItems.forEach(function (navItem) {
     navItem.classList.add("active");
   }
 });
+
+////////////////////////////////////////////////////////////////////////////////////////////////
