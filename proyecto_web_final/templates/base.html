@@ -11,6 +11,8 @@
         <!-- Aquí iría el el título específico de cada página -->
       {% endblock %}
     </title>
+
+	<!-- Favicon de la página web -->
     <link rel="icon" href="{% static 'proyecto_inicio_app/img/favicon.ico' %}" type="image/x-icon"> 
 	
     <!-- Estilos comunes de todas las páginas -->
@@ -19,10 +21,8 @@
     <link rel="stylesheet" href="{% static 'proyecto_inicio_app/vendor/bootstrap/css/bootstrap.min.css' %}">
 
     <!-- Fonts -->
-    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
-     
 
     <!-- Styles -->
     <link rel="stylesheet" href="{% static 'proyecto_inicio_app/css/gestion.css' %}">
@@ -34,6 +34,7 @@
   </head>
   <body>
   
+	<!-- Cabecera común de todas las páginas -->
     <h1 class="site-heading text-center text-white d-none d-lg-block">
 		<span class="site-heading-lower">Gestión de Pedidos</span>
     </h1>
@@ -73,6 +74,7 @@
       {% endblock %}
     </main>
 
+	<!-- Footer común para todas las páginas -->
     <footer class='footer'>
 		<footer class="footer text-faded text-center py-5">
 		<div class="container">
@@ -101,13 +103,14 @@
 				<a href="sample.html" class="link">Aviso legal</a> ·
 				<a href="sample.html" class="link">Cookies</a>
 			</p>
-			<p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
+			<p class="m-0 mbt1">&copy; Gestión de Pedidos 2024</p>
       </div>
 	</footer>
 
-    <!-- Bootstrap -->
+    <!-- Script js para Bootstrap -->
     <script src="{% static 'proyecto_inicio_app/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'proyecto_inicio_app/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'proyecto_inicio_app/js/scriptPersonalizado.js' %}"></script>
     </footer>
 
     {% block scripts %}
