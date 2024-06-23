@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- HEAD DE LA PLANTILLA -->
+
+{% block title %} Home {% endblock %}
+
+{% block styles %}{% endblock %}
+
+<!-- BODY DE LA PLANTILLA -->
+
+{% block content %}
+
+  {% for servicio in servicios_app %}
+
+    <section class='text-white text-center mt-2 mb-2'>
+      <h2>{{ servicio.titulo }}</h2>
+      <p class='w-50 mr-auto mx-auto'>{{ servicio.contenido }}</p>
+      <img class='img-fluid w-25 h-25 rounded mr-auto mx-auto' src="{{ servicio.imagen.url }}" alt="Imagen de {{ servicio.titulo }}">
+    </section>
+    <hr class='bg-white font-weight-bold w-75'>
+  {% endfor %}
+
+
+{% endblock %}
+
+{% block scripts %}{% endblock %}

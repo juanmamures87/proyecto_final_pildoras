@@ -4,9 +4,6 @@ from django.shortcuts import render
 def home (request):
     return render(request, 'proyecto_inicio_app/home.html')
 
-def servicios (request):
-    return render(request, 'proyecto_inicio_app/servicios.html')
-
 def tienda (request):
     return render(request, 'proyecto_inicio_app/tienda.html')
 
