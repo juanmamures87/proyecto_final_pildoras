@@ -1,9 +1,22 @@
 .servicios__imagen {
-    width: 30rem !important;
-    height: 20rem !important;
+  width: 30rem !important;
+  height: 20rem !important;
 }
 
 .servicios__info {
-    width: 60% !important;
-    margin-top: 0 !important;
+  width: 60% !important;
+  margin-top: 0 !important;
+}
+
+@media (width <= 480px) {
+  .servicios__imagen {
+    width: 100vw !important;
+  }
+
+  .servicios__info {
+    width: 90vw !important;
+    background-color: rgba(89, 69, 243);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
