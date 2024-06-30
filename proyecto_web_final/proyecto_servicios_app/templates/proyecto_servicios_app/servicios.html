@@ -5,7 +5,11 @@
 
 {% block title %} Home {% endblock %}
 
-{% block styles %}{% endblock %}
+{% block styles %}
+
+  <link rel="stylesheet" href="{% static 'proyecto_servicios_app/css/servicios.css' %}">
+
+{% endblock %}
 
 <!-- BODY DE LA PLANTILLA -->
 
@@ -13,12 +17,22 @@
 
   {% for servicio in servicios_app %}
 
-    <section class='text-white text-center mt-2 mb-2'>
-      <h2>{{ servicio.titulo }}</h2>
-      <p class='w-50 mr-auto mx-auto'>{{ servicio.contenido }}</p>
-      <img class='img-fluid w-25 h-25 rounded mr-auto mx-auto' src="{{ servicio.imagen.url }}" alt="Imagen de {{ servicio.titulo }}">
+    <section class="page-section clearfix">
+      <div class="container">
+        <div class="intro">
+          <img class="servicios__imagen intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ servicio.imagen.url }}" alt="{{ servicio.titulo }}"/>
+          <div class="servicios__info intro-text left-0 text-center bg-faded p-5 rounded">
+            <h2 class="section-heading mb-4" >
+              <span class="section-heading-lower">{{ servicio.titulo }}</span>
+            </h2>
+            <p class="mb-3">{{ servicio.contenido }}</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <hr class='bg-white font-weight-bold w-75'>
+    <br/>
+    <hr class='separacion__servicios bg-white font-weight-bold w-75'>
+    
   {% endfor %}
 
 
